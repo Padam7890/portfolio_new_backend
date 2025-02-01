@@ -1,0 +1,57 @@
+{
+  "kind": "singleType",
+  "collectionName": "personalinfos",
+  "info": {
+    "singularName": "personalinfo",
+    "pluralName": "personalinfos",
+    "displayName": "personalinfo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "positions": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "other": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "profileimage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "birthday": {
+      "type": "date"
+    }
+  }
+}
