@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "skills",
+  "collectionName": "portfolios",
   "info": {
-    "singularName": "skill",
-    "pluralName": "skills",
-    "displayName": "skill",
+    "singularName": "portfolio",
+    "pluralName": "portfolios",
+    "displayName": "Portfolio",
     "description": ""
   },
   "options": {
@@ -12,6 +12,12 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -23,14 +29,16 @@
         "audios"
       ]
     },
-    "title": {
+    "url": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
-    "percentage": {
+    "others": {
       "type": "string"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
     }
   }
 }
