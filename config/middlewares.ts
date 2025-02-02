@@ -34,9 +34,8 @@ module.exports = [
       enabled: true,
       origin: '*',
       methods: ["GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS"],
-      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+      headers: '*',
       keepHeadersOnError: true,
-
     },
   },
   "strapi::poweredBy",
