@@ -1,0 +1,27 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: copy env
+        run: |
+          cp /home/api/homes/be/.env ./
+
+      - name: Build
+        run: |
+          docker build -t be:prod .
+
+      - name: compose up
+        run: |
+          cd  /home/api/homes/be/
+          docker compose up -d
