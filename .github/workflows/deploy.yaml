@@ -15,13 +15,13 @@ jobs:
 
       - name: copy env
         run: |
-          cp /home/api/homes/be/.env ./
+          cp /home/api/homes/padam/be/.env ./
 
       - name: Build
         run: |
-          docker build -t be:prod .
+          docker build -t bepadam:dev .
 
       - name: compose up
         run: |
-          cd  /home/api/homes/be/
+          cd  /home/api/homes/padam/be/
           docker compose up -d
